@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Noto Sans Mono", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   background-color: #eeeeee;
 }
@@ -18,6 +18,9 @@ p {
 
 img {
   width: 100%;
+}
+h1 {
+  margin: 10px;
 }
 
 /* Nav */
@@ -35,8 +38,8 @@ nav img {
   margin: 4px;
 }
 
-/* footer */
-footer {
+/* container1*/
+.container1 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -47,34 +50,35 @@ footer {
   color: #000000;
 }
 
-footer .about {
+.container1 .about {
   text-align: center;
 }
 
-.logo-text {
-  /* font-size: 4.5rem;
-  font-weight: bold; */
+/* .logo-text {
+  font-size: 4.5rem;
+  font-weight: bold;
   color: #000000;
-}
+} */
 
-footer .contact {
+.container1 .contact {
   text-align: center;
   margin-bottom: 10px;
 }
 
-footer .contact i {
+.container1 .contact i {
   font-size: 30px;
 }
 
-footer .contact a {
+.container1 .contact a {
   font-size: 30px;
   color: #fff;
 }
 
 /* icons animation */
 .socials {
-  display: flex;
+  display: none;
   column-gap: 25px;
+  margin: 20px;
 }
 .icon {
   width: 60px;
@@ -108,23 +112,19 @@ footer .contact a {
   );
   outline-color: #a02d76;
 }
-.icon--twitter:hover {
-  background-color: #1da1f2;
-  outline-color: #1da1f2;
-}
-/* bouncing for the name  */
-.bounce {
-  animation: bouncing 0.6s ease infinite alternate;
-}
-@keyframes bouncing {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(20px);
-  }
+.icon--whatsapp:hover {
+  background-color: #4fce5d;
+  outline-color: #1df228;
 }
 
+.icon--facebook:hover {
+  background-color: #1778f2;
+  outline-color: #1d72f2;
+}
+.icon--envelope:hover {
+  background-color: #f79b03;
+  outline-color: #f29d1d;
+}
 .button {
   text-decoration: none;
   text-transform: uppercase;
@@ -159,6 +159,20 @@ footer .contact a {
 
 .button:hover::before {
   width: 150%;
+}
+.socials.show {
+  display: flex;
+
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Mobile first responsive design */
