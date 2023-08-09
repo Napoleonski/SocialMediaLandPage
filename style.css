@@ -1,3 +1,11 @@
+:root {
+  --text: #05121f;
+  --background: #e9f2fb;
+  --primary: #91bfed;
+  --secondary: #d3e5f8;
+  --accent: #247fdb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +15,12 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
-  background-color: #eeeeee;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 p {
-  color: #000000;
+  color: var(--text);
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
@@ -19,14 +28,14 @@ p {
 img {
   width: 100%;
 }
+
 h1 {
   margin: 10px;
 }
 
-/* Nav */
 nav {
   width: 100%;
-  box-shadow: 0px 1px 1px #eeeeee;
+  box-shadow: 0px 1px 1px var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +47,6 @@ nav img {
   margin: 4px;
 }
 
-/* container1*/
 .container1 {
   width: 100%;
   display: flex;
@@ -46,19 +54,13 @@ nav img {
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  background-color: #eeeeee;
-  color: #000000;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .container1 .about {
   text-align: center;
 }
-
-/* .logo-text {
-  font-size: 4.5rem;
-  font-weight: bold;
-  color: #000000;
-} */
 
 .container1 .contact {
   text-align: center;
@@ -71,15 +73,15 @@ nav img {
 
 .container1 .contact a {
   font-size: 30px;
-  color: #fff;
+  color: var(--text);
 }
 
-/* icons animation */
 .socials {
   display: none;
   column-gap: 25px;
   margin: 20px;
 }
+
 .icon {
   width: 60px;
   height: 60px;
@@ -88,19 +90,22 @@ nav img {
   justify-content: center;
   text-decoration: none;
   font-size: 26px;
-  color: #fff;
+  color: var(--text);
   border-radius: 50%;
-  outline: 2px solid #fff;
+  outline: 2px solid var(--text);
   transition-property: outline-offset, outline-color, background-color;
   transition-duration: 0.25s;
 }
+
 .icon:hover {
   outline-offset: 4px;
+  color: #fff;
 }
 
 .icon:hover i {
   animation: shake 0.25s;
 }
+
 .icon--instagram:hover {
   background-image: radial-gradient(
     circle at 30% 107%,
@@ -110,8 +115,9 @@ nav img {
     #d6249f 60%,
     #285aeb 90%
   );
-  outline-color: #a02d76;
+  outline-color: var(--accent);
 }
+
 .icon--whatsapp:hover {
   background-color: #4fce5d;
   outline-color: #1df228;
@@ -121,16 +127,18 @@ nav img {
   background-color: #1778f2;
   outline-color: #1d72f2;
 }
+
 .icon--envelope:hover {
   background-color: #f79b03;
   outline-color: #f29d1d;
 }
+
 .button {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
-  outline: 2px solid #fff;
+  color: var(--text);
+  outline: 2px solid var(--text);
   padding: 20px 40px;
   position: relative;
   overflow: hidden;
@@ -141,7 +149,7 @@ nav img {
 }
 
 .button:hover {
-  color: #833ab4;
+  color: var(--accent);
 }
 
 .button::before {
@@ -151,7 +159,7 @@ nav img {
   left: -50px;
   width: 0;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--text);
   transform: skewX(35deg);
   z-index: -1;
   transition: width 1s;
@@ -160,9 +168,9 @@ nav img {
 .button:hover::before {
   width: 150%;
 }
+
 .socials.show {
   display: flex;
-
   animation: fadeIn 0.5s;
 }
 
@@ -175,8 +183,7 @@ nav img {
   }
 }
 
-/* Mobile first responsive design */
-@media (min-width: 675px) {
+@media screen and (min-width: 675px) {
   nav {
     flex-direction: row;
     justify-content: space-between;
