@@ -180,12 +180,9 @@ nav img {
   display: flex;
   animation: fadeIn 0.5s;
 }
-.button:focus,
-.icon:focus,
+
 .button:active,
-.icon:active,
-.button:hover,
-.icon:hover {
+.icon:active {
   background-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   touch-action: manipulation;
